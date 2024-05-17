@@ -1,1 +1,0 @@
-savedcmd_/home/rickfeng/code/workspace/ldd/custom_drivers/002pseudo_char_driver/main.mod := printf '%s\n'   main.o | awk '!x[$$0]++ { print("/home/rickfeng/code/workspace/ldd/custom_drivers/002pseudo_char_driver/"$$0) }' > /home/rickfeng/code/workspace/ldd/custom_drivers/002pseudo_char_driver/main.mod

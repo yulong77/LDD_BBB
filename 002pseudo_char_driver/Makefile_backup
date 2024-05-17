@@ -1,4 +1,4 @@
-obj-m := pcd.o
+obj-m := main.o
 
 ARCH=arm
 CROSS_COMPILE=arm-linux-gnueabihf-

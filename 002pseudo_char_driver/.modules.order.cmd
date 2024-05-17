@@ -1,1 +1,1 @@
-savedcmd_/home/rickfeng/code/workspace/ldd/custom_drivers/002pseudo_char_driver/modules.order := {   echo /home/rickfeng/code/workspace/ldd/custom_drivers/002pseudo_char_driver/main.o; :; } > /home/rickfeng/code/workspace/ldd/custom_drivers/002pseudo_char_driver/modules.order
+savedcmd_/home/rickfeng/code/workspace/ldd/custom_drivers/002pseudo_char_driver/modules.order := {   echo /home/rickfeng/code/workspace/ldd/custom_drivers/002pseudo_char_driver/pcd.o; :; } > /home/rickfeng/code/workspace/ldd/custom_drivers/002pseudo_char_driver/modules.order
