@@ -3,7 +3,11 @@
         {
             "name": "Linux",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "/usr/include",
+                "/usr/include/linux",
+                //"/usr/src/linux-headers-$(uname -r)/include",
+                //"/lib/modules/$(uname -r)/build/include"
             ],
             "defines": [],
             "intelliSenseMode": "linux-gcc-arm64"
