@@ -10,8 +10,10 @@
 #undef pr_fmt
 #define pr_fmt(fmt) "%s: " fmt, __func__
 
+/* pseudo device's memory */
 char device_buffer[DEV_MEM_SIZE];
 
+/* This holds the device number */
 dev_t device_number;
 
 struct cdev pcd_cdev;

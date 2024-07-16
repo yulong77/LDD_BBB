@@ -1,1 +1,1 @@
-savedcmd_/home/rickfeng/code/workspace/ldd/custom_drivers/001hello_world/modules.order := {   echo /home/rickfeng/code/workspace/ldd/custom_drivers/001hello_world/main.o; :; } > /home/rickfeng/code/workspace/ldd/custom_drivers/001hello_world/modules.order
+cmd_/home/rickfeng/code/workspace/ldd/custom_drivers/001hello_world/modules.order := {   echo /home/rickfeng/code/workspace/ldd/custom_drivers/001hello_world/main.ko; :; } | awk '!x[$$0]++' - > /home/rickfeng/code/workspace/ldd/custom_drivers/001hello_world/modules.order
