@@ -5,7 +5,7 @@
 #include <linux/kdev_t.h>
 #include <linux/uaccess.h>
 
-#undef pr_fmt
+#undef  pr_fmt
 #define pr_fmt(fmt) "%s: " fmt, __func__
 
 #define NO_OF_DEVICES 4
@@ -15,12 +15,17 @@
 #define MEM_SIZE_MAX_PCDEV3 1024
 #define MEM_SIZE_MAX_PCDEV4 1024
 
-/*pseudo device's memory*/
+#define RDONLY 0x01
+#define WRONLY 0x10
+#define RDWR   0x11
+
+/* pseudo device's memory */
 char device_buffer_pcdev1[MEM_SIZE_MAX_PCDEV1];
 char device_buffer_pcdev2[MEM_SIZE_MAX_PCDEV2];
 char device_buffer_pcdev3[MEM_SIZE_MAX_PCDEV3];
 char device_buffer_pcdev4[MEM_SIZE_MAX_PCDEV4];
 
+/*Driver private data structure*/
 struct pcdev_private_data
 {
     char *buffer;
@@ -51,26 +56,31 @@ struct pcdrv_private_data pcdrv_data = {
             .buffer = device_buffer_pcdev1,
             .size = MEM_SIZE_MAX_PCDEV1,
             .serial_number = "PCDEV1XYZ123",
-            .perm = 0x1, /*Read only*/
+            .perm = RDONLY, /*Read only*/
         },
+
         [1] = {
             .buffer = device_buffer_pcdev2, 
             .size = MEM_SIZE_MAX_PCDEV2, 
             .serial_number = "PCDEV2XYZ123", 
-            .perm = 0x10, /*Write only*/
+            .perm = WRONLY, /*Write only*/
         },
+
         [2] = {
             .buffer = device_buffer_pcdev3, 
             .size = MEM_SIZE_MAX_PCDEV3, 
             .serial_number = "PCDEV3XYZ123", 
-            .perm = 0x11, /*Read & Write*/
+            .perm = RDWR, /*Read & Write*/
         },
+        
         [3] = {
             .buffer = device_buffer_pcdev4, 
             .size = MEM_SIZE_MAX_PCDEV4, 
             .serial_number = "PCDEV4XYZ123", 
-            .perm = 0x11, /*Read & Write*/
-        }}};
+            .perm = RDWR, /*Read & Write*/
+        }
+    }
+};
 
 loff_t pcd_lseek(struct file *filp, loff_t offset, int whence)
 {
@@ -174,9 +184,20 @@ ssize_t pcd_write(struct file *filp, const char __user *buff, size_t count, loff
 	return count;
 }
 
-int check_permission(void)
+int check_permission(int dev_perm, int access_mode)
 {
-    return 0;
+    if(dev_perm == RDWR)
+        return 0;
+    
+    /*Ensure readonly access*/
+    if( (dev_perm == RDONLY) && ( (access_mode & FMODE_READ) && !(access_mode & FMODE_WRITE) ) )
+        return 0;
+    
+    /*Ensure writeonly access*/
+    if( (dev_perm == WRONLY) && ( (access_mode & FMODE_WRITE) && !(access_mode & FMODE_READ) ) )
+        return 0;
+
+    return -EPERM;
 }
 
 int pcd_open(struct inode *inode, struct file *filp)
@@ -184,7 +205,7 @@ int pcd_open(struct inode *inode, struct file *filp)
     int retval;
     int minor_n;
 
-    struct pcdev_private_data *pcdev_data;
+    struct pcdev_private_data *pcdev_data = (struct pcdev_private_data*)filp->private_data;
 
     /*Find out on which device file open was attempted by the user space*/
     minor_n = MINOR(inode->i_rdev);
@@ -197,7 +218,7 @@ int pcd_open(struct inode *inode, struct file *filp)
     filp->private_data = pcdev_data;
 
     /*Check permission*/
-    retval = check_permission();
+    retval = check_permission(pcdev_data->perm, filp->f_mode);
 
     if (retval == 0) 
         pr_info("Open was successful.\n");
@@ -230,7 +251,7 @@ static int __init pcd_driver_init(void)
     int retval;
 
     /*1. Dynamically allocate a device number.*/
-    retval = alloc_chrdev_region(&pcdrv_data.device_number, 0, 1, "pcb_devices");
+    retval = alloc_chrdev_region(&pcdrv_data.device_number, 0, NO_OF_DEVICES, "pcb_devices");
     if (retval < 0)
     {
         pr_info("Alloc chrdev failed.\n");

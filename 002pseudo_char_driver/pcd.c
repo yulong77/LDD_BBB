@@ -8,6 +8,7 @@
 #define DEV_MEM_SIZE 512
 
 #undef pr_fmt
+/* See line 151 */
 #define pr_fmt(fmt) "%s: " fmt, __func__
 
 /* pseudo device's memory */
@@ -16,6 +17,7 @@ char device_buffer[DEV_MEM_SIZE];
 /* This holds the device number */
 dev_t device_number;
 
+/* cdev variable */
 struct cdev pcd_cdev;
 
 loff_t pcd_lseek (struct file *filp, loff_t offset, int whence) {
@@ -120,7 +122,7 @@ int pcd_release (struct inode *inode, struct file *filp) {
 	return 0;
 }
 
-/*file operations of the driver*/
+/* file operations of the driver */
 struct file_operations pcd_fops = 
 {
 	.open = pcd_open,

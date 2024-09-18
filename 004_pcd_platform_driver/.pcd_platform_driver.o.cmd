@@ -1,11 +1,8 @@
-savedcmd_/home/rickfeng/code/workspace/ldd/custom_drivers/003_pseudo_char_driver_multiple/pcd_n.mod.o :=  gcc-12 -Wp,-MMD,/home/rickfeng/code/workspace/ldd/custom_drivers/003_pseudo_char_driver_multiple/.pcd_n.mod.o.d -nostdinc -I/usr/src/linux-headers-6.6.47+rpt-common-rpi/arch/arm64/include -I./arch/arm64/include/generated -I/usr/src/linux-headers-6.6.47+rpt-common-rpi/include -I./include -I/usr/src/linux-headers-6.6.47+rpt-common-rpi/arch/arm64/include/uapi -I./arch/arm64/include/generated/uapi -I/usr/src/linux-headers-6.6.47+rpt-common-rpi/include/uapi -I./include/generated/uapi -include /usr/src/linux-headers-6.6.47+rpt-common-rpi/include/linux/compiler-version.h -include /usr/src/linux-headers-6.6.47+rpt-common-rpi/include/linux/kconfig.h -include /usr/src/linux-headers-6.6.47+rpt-common-rpi/include/linux/compiler_types.h -D__KERNEL__ -mlittle-endian -DCC_USING_PATCHABLE_FUNCTION_ENTRY -DKASAN_SHADOW_SCALE_SHIFT= -fmacro-prefix-map=/usr/src/linux-headers-6.6.47+rpt-common-rpi/= -std=gnu11 -fshort-wchar -funsigned-char -fno-common -fno-PIE -fno-strict-aliasing -mgeneral-regs-only -DCONFIG_CC_HAS_K_CONSTRAINT=1 -Wno-psabi -mabi=lp64 -fno-asynchronous-unwind-tables -fno-unwind-tables -mbranch-protection=pac-ret -Wa,-march=armv8.5-a -DARM64_ASM_ARCH='"armv8.5-a"' -DKASAN_SHADOW_SCALE_SHIFT= -fno-delete-null-pointer-checks -O2 -fno-allow-store-data-races -fstack-protector-strong -fno-omit-frame-pointer -fno-optimize-sibling-calls -ftrivial-auto-var-init=zero -fno-stack-clash-protection -fpatchable-function-entry=4,2 -falign-functions=8 -fno-strict-overflow -fno-stack-check -fconserve-stack -Wall -Wundef -Werror=implicit-function-declaration -Werror=implicit-int -Werror=return-type -Werror=strict-prototypes -Wno-format-security -Wno-trigraphs -Wno-frame-address -Wno-address-of-packed-member -Wframe-larger-than=2048 -Wno-main -Wno-unused-but-set-variable -Wno-unused-const-variable -Wno-dangling-pointer -Wvla -Wno-pointer-sign -Wcast-function-type -Wno-array-bounds -Wno-alloc-size-larger-than -Wimplicit-fallthrough=5 -Werror=date-time -Werror=incompatible-pointer-types -Werror=designated-init -Wenum-conversion -Wno-unused-but-set-variable -Wno-unused-const-variable -Wno-restrict -Wno-packed-not-aligned -Wno-format-overflow -Wno-format-truncation -Wno-stringop-overflow -Wno-stringop-truncation -Wno-missing-field-initializers -Wno-type-limits -Wno-shift-negative-value -Wno-maybe-uninitialized -Wno-sign-compare -mstack-protector-guard=sysreg -mstack-protector-guard-reg=sp_el0 -mstack-protector-guard-offset=1408 -DMODULE -DKBUILD_BASENAME='"pcd_n.mod"' -DKBUILD_MODNAME='"pcd_n"' -D__KBUILD_MODNAME=kmod_pcd_n -c -o /home/rickfeng/code/workspace/ldd/custom_drivers/003_pseudo_char_driver_multiple/pcd_n.mod.o /home/rickfeng/code/workspace/ldd/custom_drivers/003_pseudo_char_driver_multiple/pcd_n.mod.c
+savedcmd_/home/rickfeng/code/workspace/ldd/custom_drivers/004_pcd_platform_driver/pcd_platform_driver.o :=  gcc-12 -Wp,-MMD,/home/rickfeng/code/workspace/ldd/custom_drivers/004_pcd_platform_driver/.pcd_platform_driver.o.d -nostdinc -I/usr/src/linux-headers-6.6.47+rpt-common-rpi/arch/arm64/include -I./arch/arm64/include/generated -I/usr/src/linux-headers-6.6.47+rpt-common-rpi/include -I./include -I/usr/src/linux-headers-6.6.47+rpt-common-rpi/arch/arm64/include/uapi -I./arch/arm64/include/generated/uapi -I/usr/src/linux-headers-6.6.47+rpt-common-rpi/include/uapi -I./include/generated/uapi -include /usr/src/linux-headers-6.6.47+rpt-common-rpi/include/linux/compiler-version.h -include /usr/src/linux-headers-6.6.47+rpt-common-rpi/include/linux/kconfig.h -include /usr/src/linux-headers-6.6.47+rpt-common-rpi/include/linux/compiler_types.h -D__KERNEL__ -mlittle-endian -DCC_USING_PATCHABLE_FUNCTION_ENTRY -DKASAN_SHADOW_SCALE_SHIFT= -fmacro-prefix-map=/usr/src/linux-headers-6.6.47+rpt-common-rpi/= -std=gnu11 -fshort-wchar -funsigned-char -fno-common -fno-PIE -fno-strict-aliasing -mgeneral-regs-only -DCONFIG_CC_HAS_K_CONSTRAINT=1 -Wno-psabi -mabi=lp64 -fno-asynchronous-unwind-tables -fno-unwind-tables -mbranch-protection=pac-ret -Wa,-march=armv8.5-a -DARM64_ASM_ARCH='"armv8.5-a"' -DKASAN_SHADOW_SCALE_SHIFT= -fno-delete-null-pointer-checks -O2 -fno-allow-store-data-races -fstack-protector-strong -fno-omit-frame-pointer -fno-optimize-sibling-calls -ftrivial-auto-var-init=zero -fno-stack-clash-protection -fpatchable-function-entry=4,2 -falign-functions=8 -fno-strict-overflow -fno-stack-check -fconserve-stack -Wall -Wundef -Werror=implicit-function-declaration -Werror=implicit-int -Werror=return-type -Werror=strict-prototypes -Wno-format-security -Wno-trigraphs -Wno-frame-address -Wno-address-of-packed-member -Wframe-larger-than=2048 -Wno-main -Wno-unused-but-set-variable -Wno-unused-const-variable -Wno-dangling-pointer -Wvla -Wno-pointer-sign -Wcast-function-type -Wno-array-bounds -Wno-alloc-size-larger-than -Wimplicit-fallthrough=5 -Werror=date-time -Werror=incompatible-pointer-types -Werror=designated-init -Wenum-conversion -Wno-unused-but-set-variable -Wno-unused-const-variable -Wno-restrict -Wno-packed-not-aligned -Wno-format-overflow -Wno-format-truncation -Wno-stringop-overflow -Wno-stringop-truncation -Wno-missing-field-initializers -Wno-type-limits -Wno-shift-negative-value -Wno-maybe-uninitialized -Wno-sign-compare -mstack-protector-guard=sysreg -mstack-protector-guard-reg=sp_el0 -mstack-protector-guard-offset=1408  -DMODULE  -DKBUILD_BASENAME='"pcd_platform_driver"' -DKBUILD_MODNAME='"pcd_platform_driver"' -D__KBUILD_MODNAME=kmod_pcd_platform_driver -c -o /home/rickfeng/code/workspace/ldd/custom_drivers/004_pcd_platform_driver/pcd_platform_driver.o /home/rickfeng/code/workspace/ldd/custom_drivers/004_pcd_platform_driver/pcd_platform_driver.c  
 
-source_/home/rickfeng/code/workspace/ldd/custom_drivers/003_pseudo_char_driver_multiple/pcd_n.mod.o := /home/rickfeng/code/workspace/ldd/custom_drivers/003_pseudo_char_driver_multiple/pcd_n.mod.c
+source_/home/rickfeng/code/workspace/ldd/custom_drivers/004_pcd_platform_driver/pcd_platform_driver.o := /home/rickfeng/code/workspace/ldd/custom_drivers/004_pcd_platform_driver/pcd_platform_driver.c
 
-deps_/home/rickfeng/code/workspace/ldd/custom_drivers/003_pseudo_char_driver_multiple/pcd_n.mod.o := \
-    $(wildcard include/config/UNWINDER_ORC) \
-    $(wildcard include/config/MODULE_UNLOAD) \
-    $(wildcard include/config/RETPOLINE) \
+deps_/home/rickfeng/code/workspace/ldd/custom_drivers/004_pcd_platform_driver/pcd_platform_driver.o := \
   /usr/src/linux-headers-6.6.47+rpt-common-rpi/include/linux/compiler-version.h \
     $(wildcard include/config/CC_VERSION_TEXT) \
   /usr/src/linux-headers-6.6.47+rpt-common-rpi/include/linux/kconfig.h \
@@ -23,6 +20,7 @@ deps_/home/rickfeng/code/workspace/ldd/custom_drivers/003_pseudo_char_driver_mul
     $(wildcard include/config/CC_HAS_ASM_INLINE) \
   /usr/src/linux-headers-6.6.47+rpt-common-rpi/include/linux/compiler_attributes.h \
   /usr/src/linux-headers-6.6.47+rpt-common-rpi/include/linux/compiler-gcc.h \
+    $(wildcard include/config/RETPOLINE) \
     $(wildcard include/config/GCC_ASM_GOTO_OUTPUT_WORKAROUND) \
     $(wildcard include/config/ARCH_USE_BUILTIN_BSWAP) \
     $(wildcard include/config/SHADOW_CALL_STACK) \
@@ -53,6 +51,7 @@ deps_/home/rickfeng/code/workspace/ldd/custom_drivers/003_pseudo_char_driver_mul
     $(wildcard include/config/HAVE_STATIC_CALL_INLINE) \
     $(wildcard include/config/KUNIT) \
     $(wildcard include/config/PRINTK_INDEX) \
+    $(wildcard include/config/MODULE_UNLOAD) \
     $(wildcard include/config/CONSTRUCTORS) \
     $(wildcard include/config/FUNCTION_ERROR_INJECTION) \
     $(wildcard include/config/DYNAMIC_DEBUG_CORE) \
@@ -928,17 +927,55 @@ deps_/home/rickfeng/code/workspace/ldd/custom_drivers/003_pseudo_char_driver_mul
     $(wildcard include/config/HAVE_MOD_ARCH_SPECIFIC) \
     $(wildcard include/config/MODULES_USE_ELF_REL) \
     $(wildcard include/config/MODULES_USE_ELF_RELA) \
-  /usr/src/linux-headers-6.6.47+rpt-common-rpi/include/linux/build-salt.h \
-    $(wildcard include/config/BUILD_SALT) \
-  /usr/src/linux-headers-6.6.47+rpt-common-rpi/include/linux/elfnote.h \
-  /usr/src/linux-headers-6.6.47+rpt-common-rpi/include/linux/elfnote-lto.h \
-  /usr/src/linux-headers-6.6.47+rpt-common-rpi/include/linux/export-internal.h \
-    $(wildcard include/config/PARISC) \
-  /usr/src/linux-headers-6.6.47+rpt-common-rpi/include/linux/vermagic.h \
-    $(wildcard include/config/PREEMPT_BUILD) \
-  include/generated/utsrelease.h \
-  /usr/src/linux-headers-6.6.47+rpt-common-rpi/arch/arm64/include/asm/vermagic.h \
+  /usr/src/linux-headers-6.6.47+rpt-common-rpi/include/linux/cdev.h \
+  /usr/src/linux-headers-6.6.47+rpt-common-rpi/include/linux/device.h \
+    $(wildcard include/config/HAS_IOMEM) \
+    $(wildcard include/config/GENERIC_MSI_IRQ) \
+    $(wildcard include/config/ENERGY_MODEL) \
+    $(wildcard include/config/PINCTRL) \
+    $(wildcard include/config/DMA_OPS) \
+    $(wildcard include/config/DMA_DECLARE_COHERENT) \
+    $(wildcard include/config/DMA_CMA) \
+    $(wildcard include/config/SWIOTLB) \
+    $(wildcard include/config/SWIOTLB_DYNAMIC) \
+    $(wildcard include/config/ARCH_HAS_SYNC_DMA_FOR_DEVICE) \
+    $(wildcard include/config/ARCH_HAS_SYNC_DMA_FOR_CPU) \
+    $(wildcard include/config/ARCH_HAS_SYNC_DMA_FOR_CPU_ALL) \
+    $(wildcard include/config/DMA_OPS_BYPASS) \
+    $(wildcard include/config/PM_SLEEP) \
+    $(wildcard include/config/OF) \
+    $(wildcard include/config/DEVTMPFS) \
+  /usr/src/linux-headers-6.6.47+rpt-common-rpi/include/linux/dev_printk.h \
+  /usr/src/linux-headers-6.6.47+rpt-common-rpi/include/linux/energy_model.h \
+  /usr/src/linux-headers-6.6.47+rpt-common-rpi/include/linux/sched/cpufreq.h \
+    $(wildcard include/config/CPU_FREQ) \
+  /usr/src/linux-headers-6.6.47+rpt-common-rpi/include/linux/sched/topology.h \
+    $(wildcard include/config/SCHED_DEBUG) \
+    $(wildcard include/config/SCHED_CLUSTER) \
+    $(wildcard include/config/SCHED_MC) \
+    $(wildcard include/config/CPU_FREQ_GOV_SCHEDUTIL) \
+  /usr/src/linux-headers-6.6.47+rpt-common-rpi/include/linux/sched/idle.h \
+  /usr/src/linux-headers-6.6.47+rpt-common-rpi/include/linux/sched/sd_flags.h \
+  /usr/src/linux-headers-6.6.47+rpt-common-rpi/include/linux/ioport.h \
+  /usr/src/linux-headers-6.6.47+rpt-common-rpi/include/linux/klist.h \
+  /usr/src/linux-headers-6.6.47+rpt-common-rpi/include/linux/pm.h \
+    $(wildcard include/config/VT_CONSOLE_SLEEP) \
+    $(wildcard include/config/CXL_SUSPEND) \
+    $(wildcard include/config/PM) \
+    $(wildcard include/config/PM_CLK) \
+    $(wildcard include/config/PM_GENERIC_DOMAINS) \
+  /usr/src/linux-headers-6.6.47+rpt-common-rpi/include/linux/device/bus.h \
+    $(wildcard include/config/ACPI) \
+  /usr/src/linux-headers-6.6.47+rpt-common-rpi/include/linux/device/class.h \
+  /usr/src/linux-headers-6.6.47+rpt-common-rpi/include/linux/device/driver.h \
+  /usr/src/linux-headers-6.6.47+rpt-common-rpi/arch/arm64/include/asm/device.h \
+  /usr/src/linux-headers-6.6.47+rpt-common-rpi/include/linux/pm_wakeup.h \
+  /usr/src/linux-headers-6.6.47+rpt-common-rpi/include/linux/platform_device.h \
+    $(wildcard include/config/SUSPEND) \
+    $(wildcard include/config/HIBERNATE_CALLBACKS) \
+    $(wildcard include/config/SUPERH) \
+  /home/rickfeng/code/workspace/ldd/custom_drivers/004_pcd_platform_driver/platform.h \
 
-/home/rickfeng/code/workspace/ldd/custom_drivers/003_pseudo_char_driver_multiple/pcd_n.mod.o: $(deps_/home/rickfeng/code/workspace/ldd/custom_drivers/003_pseudo_char_driver_multiple/pcd_n.mod.o)
+/home/rickfeng/code/workspace/ldd/custom_drivers/004_pcd_platform_driver/pcd_platform_driver.o: $(deps_/home/rickfeng/code/workspace/ldd/custom_drivers/004_pcd_platform_driver/pcd_platform_driver.o)
 
-$(deps_/home/rickfeng/code/workspace/ldd/custom_drivers/003_pseudo_char_driver_multiple/pcd_n.mod.o):
+$(deps_/home/rickfeng/code/workspace/ldd/custom_drivers/004_pcd_platform_driver/pcd_platform_driver.o):
