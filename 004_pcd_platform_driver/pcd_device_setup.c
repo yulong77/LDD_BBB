@@ -11,9 +11,9 @@ void pcdev_release(struct device *dev) {
     pr_info("Device has been released.\n");
 }
 
-/* 1. Creat Two platform data. */
+/* 1. Creat 4 platform data. */
 
-struct pcdev_platform_data pcdev_pdata[2] = {
+struct pcdev_platform_data pcdev_pdata[4] = {
     [0] = {
         .size = 512,
         .perm = RDWR,
@@ -23,12 +23,24 @@ struct pcdev_platform_data pcdev_pdata[2] = {
     [1] = {
         .size = 1024,
         .perm = RDWR,
-        .serial_number = "PCDEV_XYZ_2222",
+        .serial_number = "PCDEV_ABC_2222",
+    },
+
+    [2] = {
+        .size = 128,
+        .perm = RDONLY,
+        .serial_number = "PCDEV_ABC_3333",
+    },
+
+    [3] = {
+        .size = 32,
+        .perm = WRONLY,
+        .serial_number = "PCDEV_ABC_4444",
     },
 
 };
 
-/* 2. Create Two platform devices. */
+/* 2. Create 4 platform devices. */
 
 struct platform_device platform_pcdev_1 = {
     .name = "pseudo_char_device",
@@ -48,11 +60,37 @@ struct platform_device platform_pcdev_2 = {
     },
 };
 
+struct platform_device platform_pcdev_3 = {
+    .name = "pseudo_char_device",
+    .id = 2,
+    .dev = {
+        .platform_data = &pcdev_pdata[2],
+        .release = pcdev_release,
+    },
+};
+
+struct platform_device platform_pcdev_4 = {
+    .name = "pseudo_char_device",
+    .id = 3,
+    .dev = {
+        .platform_data = &pcdev_pdata[3],
+        .release = pcdev_release,
+    },
+};
+
+struct platform_device *platform_pcdevs[] = {
+    &platform_pcdev_1,
+    &platform_pcdev_2,
+    &platform_pcdev_3,
+    &platform_pcdev_4,
+};
 
 static int __init pcdev_platform_init(void) {
     /*Register platform device*/
-    platform_device_register(&platform_pcdev_1);
-    platform_device_register(&platform_pcdev_2);
+    //platform_device_register(&platform_pcdev_1);
+    //platform_device_register(&platform_pcdev_2);
+
+    platform_add_devices(platform_pcdevs, ARRAY_SIZE(platform_pcdevs)),
 
     pr_info("Device setup module has been loaded.\n");
 
@@ -62,6 +100,8 @@ static int __init pcdev_platform_init(void) {
 static void __exit pcdev_platform_exit(void) {
     platform_device_unregister(&platform_pcdev_1);
     platform_device_unregister(&platform_pcdev_2);
+    platform_device_unregister(&platform_pcdev_3);
+    platform_device_unregister(&platform_pcdev_4);
 
     pr_info("Device setup module has been unloaded.\n");
 

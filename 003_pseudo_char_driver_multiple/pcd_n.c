@@ -262,7 +262,7 @@ static int __init pcd_driver_init(void)
     pcdrv_data.class_pcd = class_create("pcd_class");
     if (IS_ERR(pcdrv_data.class_pcd))
     {
-        pr_err("Class creation failed,\n");
+        pr_err("Class creation failed.\n");
         retval = PTR_ERR(pcdrv_data.class_pcd);
         goto unreg_chrdev;
     }
@@ -292,7 +292,7 @@ static int __init pcd_driver_init(void)
               pcdrv_data.device_number+i, NULL, "pcdev-%d", i+1);
         if (IS_ERR(pcdrv_data.device_pcd))
         {
-            pr_err("Device creation failed,\n");
+            pr_err("Device creation failed.\n");
             retval = PTR_ERR(pcdrv_data.device_pcd);
             goto class_del;
         }
