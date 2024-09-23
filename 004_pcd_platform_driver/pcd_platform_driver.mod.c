@@ -40,7 +40,6 @@ __used __section("__versions") = {
 	{ 0xe78e8907, "cdev_init" },
 	{ 0x39f012c6, "cdev_add" },
 	{ 0xfbe72bcf, "device_create" },
-	{ 0xffa74631, "devm_kfree" },
 	{ 0xa4afd25e, "cdev_del" },
 	{ 0xb86bb5ac, "device_destroy" },
 	{ 0xe3ec2f2b, "alloc_chrdev_region" },
@@ -55,4 +54,4 @@ __used __section("__versions") = {
 MODULE_INFO(depends, "");
 
 
-MODULE_INFO(srcversion, "72DF7BE249C311D088FA808");
+MODULE_INFO(srcversion, "EE2443D5C5B37AE4A91AAD3");

@@ -974,6 +974,9 @@ deps_/home/rickfeng/code/workspace/ldd/custom_drivers/004_pcd_platform_driver/pc
     $(wildcard include/config/SUSPEND) \
     $(wildcard include/config/HIBERNATE_CALLBACKS) \
     $(wildcard include/config/SUPERH) \
+  /usr/src/linux-headers-6.6.47+rpt-common-rpi/include/linux/mod_devicetable.h \
+  /usr/src/linux-headers-6.6.47+rpt-common-rpi/include/uapi/linux/mei.h \
+  /usr/src/linux-headers-6.6.47+rpt-common-rpi/include/uapi/linux/mei_uuid.h \
   /home/rickfeng/code/workspace/ldd/custom_drivers/004_pcd_platform_driver/platform.h \
 
 /home/rickfeng/code/workspace/ldd/custom_drivers/004_pcd_platform_driver/pcd_platform_driver.o: $(deps_/home/rickfeng/code/workspace/ldd/custom_drivers/004_pcd_platform_driver/pcd_platform_driver.o)
