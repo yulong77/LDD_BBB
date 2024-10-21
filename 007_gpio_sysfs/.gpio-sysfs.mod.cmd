@@ -1,0 +1,1 @@
+cmd_/home/rickfeng/code/workspace/ldd/custom_drivers/007_gpio_sysfs/gpio-sysfs.mod := { echo  /home/rickfeng/code/workspace/ldd/custom_drivers/007_gpio_sysfs/gpio-sysfs.o;  echo; } > /home/rickfeng/code/workspace/ldd/custom_drivers/007_gpio_sysfs/gpio-sysfs.mod

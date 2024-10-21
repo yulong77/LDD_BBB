@@ -1,0 +1,1 @@
+cmd_/home/rickfeng/code/workspace/ldd/custom_drivers/007_gpio_sysfs/modules.order := {   echo /home/rickfeng/code/workspace/ldd/custom_drivers/007_gpio_sysfs/gpio-sysfs.ko; :; } | awk '!x[$$0]++' - > /home/rickfeng/code/workspace/ldd/custom_drivers/007_gpio_sysfs/modules.order
