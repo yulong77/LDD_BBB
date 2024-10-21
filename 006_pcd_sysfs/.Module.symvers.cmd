@@ -1,0 +1,1 @@
+savedcmd_/home/rickfeng/code/workspace/ldd/custom_drivers/006_pcd_sysfs/Module.symvers :=  scripts/mod/modpost -M -m -a      -o /home/rickfeng/code/workspace/ldd/custom_drivers/006_pcd_sysfs/Module.symvers -T /home/rickfeng/code/workspace/ldd/custom_drivers/006_pcd_sysfs/modules.order -i Module.symvers -e 

@@ -1,0 +1,1 @@
+savedcmd_/home/rickfeng/code/workspace/ldd/custom_drivers/006_pcd_sysfs/pcd_sysfs.mod := printf '%s\n'   pcd_platform_driver_dt_sysfs.o pcd_syscalls.o | awk '!x[$$0]++ { print("/home/rickfeng/code/workspace/ldd/custom_drivers/006_pcd_sysfs/"$$0) }' > /home/rickfeng/code/workspace/ldd/custom_drivers/006_pcd_sysfs/pcd_sysfs.mod

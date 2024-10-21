@@ -1,0 +1,1 @@
+savedcmd_/home/rickfeng/code/workspace/ldd/custom_drivers/006_pcd_sysfs/pcd_sysfs.o := ld -EL  -maarch64elf -z noexecstack --no-warn-rwx-segments   -r -o /home/rickfeng/code/workspace/ldd/custom_drivers/006_pcd_sysfs/pcd_sysfs.o @/home/rickfeng/code/workspace/ldd/custom_drivers/006_pcd_sysfs/pcd_sysfs.mod 
